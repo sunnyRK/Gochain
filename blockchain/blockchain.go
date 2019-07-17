@@ -99,7 +99,7 @@ func (chain *Blockchain) AddBlock(transactions []*Transaction) {
 		Handle(err)
 		lastHash, err = item.Value()
 		return err
-	})
+	}) 
 	Handle(err)
 	
 	newBlock := CreateBlock(transactions, lastHash)
